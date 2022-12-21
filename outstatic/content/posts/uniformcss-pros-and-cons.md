@@ -10,7 +10,7 @@ coverImage: ''
 publishedAt: '2022-12-21T11:17:23.142Z'
 ---
 
-Pros:
+### Pros:
 
 - It's easy to create a set of utility classes.
 
@@ -22,7 +22,7 @@ Pros:
 
 - You can select which CSS properties to generate classes for.
 
-Cons:
+### Cons:
 
 - Poorly documented.
 
