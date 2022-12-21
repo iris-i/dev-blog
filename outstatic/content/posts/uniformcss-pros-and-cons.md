@@ -1,5 +1,5 @@
 ---
-title: 'UniformCSS pros and cons'
+title: 'Pros and Cons of using UniformCSS in NextJS'
 status: 'draft'
 author:
   name: 'Iris Ibekwe'
@@ -14,7 +14,7 @@ Pros:
 
 - It's easy to create a set of utility classes.
 
-- Classes can be namespaced.
+- You can add a prefix to generated classes eg. u-color-primary.
 
 - Supports Sass modules.
 
@@ -26,5 +26,5 @@ Cons:
 
 - Poorly documented.
 
-- 
+- Unlike Tailwind, unused classes are not removed by default. You can add PurgeCSS to your Next JS postcss.config.js file to do this. Link: [https://purgecss.com/guides/next.html#customize-postcss-configuration-next-js-9-3](https://purgecss.com/guides/next.html#customize-postcss-configuration-next-js-9-3)
 
