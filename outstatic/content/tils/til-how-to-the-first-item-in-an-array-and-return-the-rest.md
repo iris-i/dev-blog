@@ -1,6 +1,6 @@
 ---
 title: 'TIL: How to the first item in an array and return the rest.'
-status: 'draft'
+status: 'published'
 author:
   name: 'Iris Ibekwe'
   picture: 'https://avatars.githubusercontent.com/u/5355315?v=4'
