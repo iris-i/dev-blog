@@ -62,5 +62,48 @@ Install the dependencies in the file:
 
 
 
+`-- `
+
+
+
+Create a lib/databaseConnection.ts file in the root folder and copy in the code from here: [https://github.com/tinacms/tina-self-hosted-demo/blob/main/lib/databaseConnection.ts](https://github.com/tinacms/tina-self-hosted-demo/blob/main/lib/databaseConnection.ts)
+
+Create and copy this [https://github.com/tinacms/tina-self-hosted-demo/blob/main/pages/api/gql.ts](https://github.com/tinacms/tina-self-hosted-demo/blob/main/pages/api/gql.ts)
+
+In pages and templates, use the dbConnection directly instead of the tina client. This is because we don't have access to the api connection at build-time.
+
+poststs/[filename.tsx] replace all instances of `client.queries.xxx` with `dbConnection.queries.`
+
+Also import the dbConnection.
+
+```typescriptreact
+import { dbConnection } from "../../lib/databaseConnection";
+```
+
+Repeat in pages.tsx and posts/[filename.tsx]
+
+Remove the unused tina client import.
+
+Update the tina config to look at the api instead of Tina Cloud when we're are editing.
+
+
+
+```javascript
+// .tina/config.jsx
+const config = defineConfig({
+  contentApiUrlOverride: '/api/gql',
+  admin: {
+    auth: {
+      useLocalAuth: true,
+      // process.env.TINA_PUBLIC_IS_LOCAL == 'true',
+    },
+  },
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID!,
+```
+
+
+
+## Authentication:
+
 
 
