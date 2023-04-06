@@ -16,7 +16,7 @@ npx create-tina-app@latest
 
 Go to [https://github.com/tinacms/tina-self-hosted-demo](https://github.com/tinacms/tina-self-hosted-demo) and copy the env variables in the readme.
 
-You will need a mngodb databse. Creae a free acount at [https://www.mongodb.com/](https://www.mongodb.com/)
+You will need a mongodb database. Create a free account at [https://www.mongodb.com/](https://www.mongodb.com/)
 
 Create a free shared database for testing.
 
@@ -32,7 +32,7 @@ To get the database URI,
 
 - Replace with the database user password.
 
-Fill in the databas uri in the .env file
+Fill in the database uri in the .env file
 
 FOr other env variables
 
@@ -44,23 +44,23 @@ FOr other env variables
 
 \-- Add your brnach name
 
-\-- Generate a new personal access token in Github: [https://github.com/settings/tokensTINA\_PUBLIC\_IS\_LOCAL=true](https://github.com/settings/tokens)
+\-- Generate a new personal access token in Github: [https://github.com/settings/tokens](https://github.com/settings/tokens)
 
 ```properties
 TINA_PUBLIC_IS_LOCAL=true
 ```
 
-THist tells you wether you want to yse the local tinacms setup or mongodb. True means you wnat to use the local version.
+This tells you whether you want to use the local tinacms setup or mongodb. True means you want to use the local version.
 
 \--
 
-Create a database.ts file within the .tina folder and copy over the code from [https://github.com/tinacms/tina-self-hosted-demo/blob/main/.tina/database.ts](https://github.com/tinacms/tina-self-hosted-demo/blob/main/.tina/database.ts) into it
+Create a database.ts file within the tina folder and copy over the code from [https://github.com/tinacms/tina-self-hosted-demo/blob/main/.tina/database.ts](https://github.com/tinacms/tina-self-hosted-demo/blob/main/.tina/database.ts) into it
 
 Install the dependencies in the file:
 
 `yarn add mongodb-level @octokit/rest js-base64`
 
-
+Expected diff: [https://github.com/iris-i/tina-self-host/commit/d2700c082e5670d135b98050e4abb2d90fcf85b0](https://github.com/iris-i/tina-self-host/commit/d2700c082e5670d135b98050e4abb2d90fcf85b0)
 
 `-- `
 
@@ -72,7 +72,7 @@ Create and copy this [https://github.com/tinacms/tina-self-hosted-demo/blob/main
 
 In pages and templates, use the dbConnection directly instead of the tina client. This is because we don't have access to the api connection at build-time.
 
-poststs/[filename.tsx] replace all instances of `client.queries.xxx` with `dbConnection.queries.`
+posts/[filename.tsx] replace all instances of `client.queries.xxx` with `dbConnection.queries.`
 
 Also import the dbConnection.
 
@@ -89,7 +89,7 @@ Update the tina config to look at the api instead of Tina Cloud when we're are e
 
 
 ```javascript
-// .tina/config.jsx
+\// .tina/config.jsx
 const config = defineConfig({
   contentApiUrlOverride: '/api/gql',
   admin: {
@@ -101,9 +101,15 @@ const config = defineConfig({
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID!,
 ```
 
+Run yarn dev<br>
 
+Your github repo will now have new commits with any changes you make in the /admin page.
+
+Your mongodb will also have the content schema and key-value pairs.
 
 ## Authentication:
+
+
 
 
 
