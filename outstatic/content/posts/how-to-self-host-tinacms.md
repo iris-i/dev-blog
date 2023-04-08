@@ -1,6 +1,6 @@
 ---
 title: 'How to self-host TinaCMS'
-status: 'draft'
+status: 'published'
 author:
   name: 'Iris Ibekwe'
   picture: 'https://avatars.githubusercontent.com/u/5355315?v=4'
@@ -62,9 +62,7 @@ Install the dependencies in the file:
 
 Expected diff: [https://github.com/iris-i/tina-self-host/commit/d2700c082e5670d135b98050e4abb2d90fcf85b0](https://github.com/iris-i/tina-self-host/commit/d2700c082e5670d135b98050e4abb2d90fcf85b0)
 
-`-- `
-
-
+`--`
 
 Create a lib/databaseConnection.ts file in the root folder and copy in the code from here: [https://github.com/tinacms/tina-self-hosted-demo/blob/main/lib/databaseConnection.ts](https://github.com/tinacms/tina-self-hosted-demo/blob/main/lib/databaseConnection.ts)
 
@@ -86,8 +84,6 @@ Remove the unused tina client import.
 
 Update the tina config to look at the api instead of Tina Cloud when we're are editing.
 
-
-
 ```javascript
 \// .tina/config.jsx
 const config = defineConfig({
@@ -108,8 +104,4 @@ Your github repo will now have new commits with any changes you make in the /adm
 Your mongodb will also have the content schema and key-value pairs.
 
 ## Authentication:
-
-
-
-
 
