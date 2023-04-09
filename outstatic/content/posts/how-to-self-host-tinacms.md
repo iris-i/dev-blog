@@ -14,7 +14,7 @@ publishedAt: '2023-04-06T12:01:42.342Z'
 npx create-tina-app@latest
 ```
 
-Go to [https://github.com/tinacms/tina-self-hosted-demo](https://github.com/tinacms/tina-self-hosted-demo) and copy the env variables in the readme.
+Go to [https://github.com/tinacms/tina-self-hosted-demo](https://github.com/tinacms/tina-self-hosted-demo) and copy the env variables in the readme. yest
 
 You will need a mongodb database. Create a free account at [https://www.mongodb.com/](https://www.mongodb.com/)
 
