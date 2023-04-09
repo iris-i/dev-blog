@@ -14,3 +14,7 @@ publishedAt: '2023-04-09T02:32:13.340Z'
 
 2. Install TInaCMS `npx @tinacms/cli@latest init`
 
+Mongdb
+
+
+
